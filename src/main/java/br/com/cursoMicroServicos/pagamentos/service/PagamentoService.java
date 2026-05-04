@@ -50,4 +50,8 @@ public class PagamentoService {
 
         return modelMapper.map(pagamento, PagamentoDto.class);
     }
+
+    public void deletePagamento(Long id){
+        repository.deleteById(id);
+    }
 }
