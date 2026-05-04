@@ -47,4 +47,10 @@ public class PagamentoController {
 
         return ResponseEntity.ok(pagamentoAtualizado);
     }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<PagamentoDto> deletar(@PathVariable @NotNull Long id){
+        service.deletePagamento(id);
+        return ResponseEntity.noContent().build();
+    }
 }
