@@ -42,4 +42,12 @@ public class PagamentoService {
 
         return modelMapper.map(pagamento, PagamentoDto.class);
     }
+
+    public PagamentoDto updatePagamento(Long id, PagamentoDto dto){
+        Pagamento pagamento = modelMapper.map(dto, Pagamento.class);
+        pagamento.setId(id);
+        pagamento = repository.save(pagamento);
+
+        return modelMapper.map(pagamento, PagamentoDto.class);
+    }
 }
