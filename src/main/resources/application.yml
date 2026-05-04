@@ -1,1 +1,10 @@
-spring.application.name=pagamentos
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/pagamentos?createDatabaseIfNotExist=true
+    username: root
+    password: root123
+
+
+  jpa:
+    show-sql: true
